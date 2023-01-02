@@ -14,9 +14,9 @@ var getResult = function (artistName, albumName) {
                 response.json().then(function (data) {
                     console.log(data.album.artist + ' hey');
                     console.log(data.album.name);
-                    console.log(data.album.tags.tag[0].name);
-                    const album = new Album(data.album.name, data.album.artist, data.album.tags.tag[0].name)
-                    fs.appendFile('./dist/album.html', album.albumHtml(data.album.name, data.album.artist, data.album.tags.tag[0].name), function (error) {
+                    console.log(data.album.wiki.summary);
+                    const album = new Album(data.album.name, data.album.artist, data.album.wiki.summary)
+                    fs.appendFile('./dist/album.html', album.albumHtml(data.album.name, data.album.artist, data.album.wiki.summary), function (error) {
                         if (error) {
                             throw error;
                         }
@@ -34,11 +34,12 @@ var getResult = function (artistName, albumName) {
 
 
 const choosealbum = () => {
+    console.log('Hello, welcome to the album reviewer. Please input your favorite albums in order')
 
     const prompt = inquirer.createPromptModule();
     prompt([
         {
-            message: 'Please enter artist name',
+            message: 'Please enter the name of the artist',
             name: 'artistName',
         },
         {
@@ -49,6 +50,18 @@ const choosealbum = () => {
         .then((answers) => {
             getResult(answers.artistName, answers.albumName)
             addMore();
+            if (answers.artistName === '' || typeof answers.artistName !== 'string') {
+                console.log('--------------------------');
+                console.log('please enter a vaid name');
+                console.log('--------------------------');
+                throw error;
+            }
+            if (answers.albumName === '' || typeof answers.albumName !== 'string') {
+                console.log('--------------------------');
+                console.log('please enter a vaid name');
+                console.log('--------------------------');
+                throw error;
+            }
         }
 
         )
