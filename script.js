@@ -3,6 +3,7 @@ const fs = require('fs');
 const config = require('./config');
 const Album = require('./lib/Album');
 
+let count = 10;
 
 
 const apikey = config.apikey;
@@ -13,8 +14,8 @@ var getResult = function (artistName, albumName) {
             if (response.ok) {
                 response.json().then(function (data) {
                     console.log(data.album.image[2]['#text']);
-                    const album = new Album(data.album.name, data.album.artist, data.album.wiki.summary, data.album.image[2]['#text'])
-                    fs.appendFile('./dist/album.html', album.albumHtml(data.album.name, data.album.artist, data.album.wiki.summary, data.album.image[2]['#text']), function (error) {
+                    const album = new Album(data.album.name, data.album.artist, data.album.wiki.summary, data.album.image[2]['#text'], count)
+                    fs.appendFile('./dist/album.html', album.albumHtml(data.album.name, data.album.artist, data.album.wiki.summary, data.album.image[2]['#text'], count), function (error) {
                         if (error) {
                             throw error;
                         }
@@ -76,10 +77,11 @@ const addMore = () => {
             name: 'select'
         }])
         .then((answer) => {
-            if (answer.select === 'yes') {
+            if (answer.select === 'yes' || count !== 0) {
+                count--;
                 choosealbum();
             }
-            else if (answer.select === 'no') {
+            else if (answer.select === 'no' || count == 10) {
                 fs.appendFile('./dist/album.html', `<body><html>`, function (error) {
                     if (error) throw error;
                 })
