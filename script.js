@@ -12,11 +12,9 @@ var getResult = function (artistName, albumName) {
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
-                    console.log(data.album.artist + ' hey');
-                    console.log(data.album.name);
-                    console.log(data.album.wiki.summary);
-                    const album = new Album(data.album.name, data.album.artist, data.album.wiki.summary)
-                    fs.appendFile('./dist/album.html', album.albumHtml(data.album.name, data.album.artist, data.album.wiki.summary), function (error) {
+                    console.log(data.album.image[2]['#text']);
+                    const album = new Album(data.album.name, data.album.artist, data.album.wiki.summary, data.album.image[2]['#text'])
+                    fs.appendFile('./dist/album.html', album.albumHtml(data.album.name, data.album.artist, data.album.wiki.summary, data.album.image[2]['#text']), function (error) {
                         if (error) {
                             throw error;
                         }
