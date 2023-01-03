@@ -1,40 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorite Albums</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body {
+            color: rgb(250, 218, 176);
+            background-color: rgb(250, 244, 235);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .navbar {
+            background-color: #962446;
+            display: flex;
+            position: inherit;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            position: relative;
+            top: 20px;
+        }
+
+        .card {
+            color: rgb(90, 64, 48);
+            background-color: #ebc9d3;
+
+        }
+
+        .card-header {
+            background-color: #d8a0b1;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        li {
+            padding: 0.5em;
+            font-size: 18px;
+        }
+
+        em {
+            font-size: 20px;
+            background-color: #b18391;
+            color: antiquewhite;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
+
 <body>
-    
 
+    <nav class="navbar">
+        <div class="container-fluid nav">
+            <span class="m-5 h1 head">Favorite Albums</span>
+        </div>
+    </nav>
 
-    <article class="card col-md-3 col-sm-8 m-3 p-3" id="album10">
+    <div class="container main">
+        <article class="card col-9 m-3 p-3" id="album10">
             <h2 class="card-header">10. Believe</h2>
             <em>Cher</em>
             <ul class="card-body">
-                <li class="card-text">Believe is the twenty-third studio album by American singer-actress Cher, released on November 10, 1998 by Warner Bros. Records. The RIAA certified it Quadruple Platinum on December 23, 1999, recognizing four million shipments in the United States; Worldwide, the album has sold more than 20 million copies, making it the biggest-selling album of her career. In 1999 the album received three Grammy Awards nominations including "Record of the Year", "Best Pop Album" and winning "Best Dance Recording" for the single "Believe". It was released by Warner Bros. Records at the end of 1998. The album was executive produced by Rob <a href="https://www.last.fm/music/Cher/Believe">Read more on Last.fm</a>.</li>
-                <img src='https://lastfm.freetls.fastly.net/i/u/174s/3b54885952161aaea4ce2965b2db1638.png' alt='artwork for Believe by Cher'>
+                <li class="card-text">Believe is the twenty-third studio album by American singer-actress Cher, released
+                    on November 10, 1998 by Warner Bros. Records. The RIAA certified it Quadruple Platinum on December
+                    23, 1999, recognizing four million shipments in the United States; Worldwide, the album has sold
+                    more than 20 million copies, making it the biggest-selling album of her career. In 1999 the album
+                    received three Grammy Awards nominations including "Record of the Year", "Best Pop Album" and
+                    winning "Best Dance Recording" for the single "Believe". It was released by Warner Bros. Records at
+                    the end of 1998. The album was executive produced by Rob <a
+                        href="https://www.last.fm/music/Cher/Believe">Read more on Last.fm</a>.</li>
+                <img src='https://lastfm.freetls.fastly.net/i/u/174s/3b54885952161aaea4ce2965b2db1638.png'
+                    alt='artwork for Believe by Cher'>
             </ul>
         </article>
-      
-    <article class="card col-md-3 col-sm-8 m-3 p-3" id="album9">
+
+        <article class="card col-9 m-3 p-3" id="album9">
             <h2 class="card-header">9. The Queen Is Dead</h2>
             <em>The Smiths</em>
             <ul class="card-body">
-                <li class="card-text">The Queen Is Dead is the third studio album by the English rock band The Smiths. It was released on 16 June 1986 in the United Kingdom by Rough Trade Records and released in the United States on 23 June 1986 through Sire Records. The album reached number two on the UK album chart, maintaining a chart residency for 22 weeks, number 70 on the Billboard 200, and was certified Gold by the RIAA in late 1990. It has sold consistently well ever since. Guitarist Johnny Marr wrote several songs that would later appear on The Queen Is Dead while <a href="https://www.last.fm/music/The+Smiths/The+Queen+Is+Dead">Read more on Last.fm</a>.</li>
-                <img src='https://lastfm.freetls.fastly.net/i/u/174s/53442bc27a314142a02d2df018b4161e.png' alt='artwork for The Queen Is Dead by The Smiths'>
+                <li class="card-text">The Queen Is Dead is the third studio album by the English rock band The Smiths.
+                    It was released on 16 June 1986 in the United Kingdom by Rough Trade Records and released in the
+                    United States on 23 June 1986 through Sire Records. The album reached number two on the UK album
+                    chart, maintaining a chart residency for 22 weeks, number 70 on the Billboard 200, and was certified
+                    Gold by the RIAA in late 1990. It has sold consistently well ever since. Guitarist Johnny Marr wrote
+                    several songs that would later appear on The Queen Is Dead while <a
+                        href="https://www.last.fm/music/The+Smiths/The+Queen+Is+Dead">Read more on Last.fm</a>.</li>
+                <img src='https://lastfm.freetls.fastly.net/i/u/174s/53442bc27a314142a02d2df018b4161e.png'
+                    alt='artwork for The Queen Is Dead by The Smiths'>
             </ul>
         </article>
-      
-    <article class="card col-md-3 col-sm-8 m-3 p-3" id="album8">
+
+        <article class="card col-9 m-3 p-3" id="album8">
             <h2 class="card-header">8. The Reminder</h2>
             <em>Feist</em>
             <ul class="card-body">
-                <li class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, laboriosam asperiores praesentium exercitationem ab aspernatur necessitatibus, minus culpa amet ea autem eveniet tempore, voluptatum velit inventore eligendi! Iste, blanditiis vel! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus modi similique nemo nam commodi odit ipsam a, omnis doloremque architecto consequuntur illo, aperiam voluptas eveniet quidem iure placeat totam accusantium.<a href="https://www.last.fm/music/Feist/The+Reminder">Read more on Last.fm</a>.</li>
-                <img src='https://lastfm.freetls.fastly.net/i/u/174s/ee8a78424bc41b190c85a3cc3e6aaf17.jpg' alt='artwork for The Reminder by Feist'>
+                <li class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, laboriosam
+                    asperiores praesentium exercitationem ab aspernatur necessitatibus, minus culpa amet ea autem
+                    eveniet tempore, voluptatum velit inventore eligendi! Iste, blanditiis vel! Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit. Necessitatibus modi similique nemo nam commodi odit ipsam a,
+                    omnis doloremque architecto consequuntur illo, aperiam voluptas eveniet quidem iure placeat totam
+                    accusantium.<a href="https://www.last.fm/music/Feist/The+Reminder">Read more on Last.fm</a>.</li>
+                <img src='https://lastfm.freetls.fastly.net/i/u/174s/ee8a78424bc41b190c85a3cc3e6aaf17.jpg'
+                    alt='artwork for The Reminder by Feist'>
             </ul>
         </article>
-        </body></html>
-      
+
+    </div>
+</body>
+
+</html>
