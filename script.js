@@ -82,7 +82,13 @@ const addMore = () => {
                 choosealbum();
             }
             else if (answer.select === 'no') {
-                fs.appendFile('./dist/album.html', `</div><body><html>`, function (error) {
+                fs.appendFile('./dist/album.html', `</div>
+                <footer class="text-center text-lg-start">
+                  <div class="text-center p-5">
+                   made with &#10084; by
+                    <a class="text-dark" href="https://github.com/MasonMarc" target="_blank">MasonMarc</a>
+                  </div>
+                </footer><body><html>`, function (error) {
                     if (error) throw error;
                 })
             }
