@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Albums</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style>
+        :root {
+            --main: #F7E1CC;
+            --light: #FFF6ED;
+            --dark: #AB937D;
+            --accent1: #6C9EAB;
+            --accent2: #CDEFF7;
+        }
+
+        body {
+            background-color: var(--accent1);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .navbar {
+            background-color: var(--accent2);
+            display: flex;
+            position: inherit;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            position: relative;
+            top: 20px;
+        }
+
+        .card {
+            background-color: var(--main);
+            filter: drop-shadow(1px 1px 1px #ada9a9);
+        }
+
+        .card-header {
+            background-color: var(--light);
+
+        }
+
+        li {
+            padding: 0.5em;
+            font-size: 18px;
+        }
+
+        em {
+            font-size: 20px;
+            background-color: var(--dark);
+            color: antiquewhite;
+            padding: 8px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cardimg {
+            width: 250px;
+            margin: 5px;
+            float: left;
+            border-radius: 2px;
+        }
+
+        .cardtext {
+            display: inline;
+        }
+
+        .textcont {
+            padding: 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid nav">
+            <span class="m-5 h1 head">Favorite Albums</span>
+        </div>
+    </nav>
+
+    <div class="container main">
+
+        <article class="card col-9 m-3 p-3" id="album10">
+            <h2 class="card-header">10. Believe</h2>
+            <em>Cher</em>
+            <div class="cardcont">
+                <img class="cardimg"
+                    src='https://lastfm.freetls.fastly.net/i/u/174s/3b54885952161aaea4ce2965b2db1638.png' width="250px">
+                <div class="textcont">
+                    <p class="cardtext">Believe is the twenty-third studio album by American singer-actress Cher,
+                        released
+                        on November 10, 1998 by Warner Bros. Records. The RIAA certified it Quadruple Platinum on
+                        December
+                        23, 1999, recognizing four million shipments in the United States; Worldwide, the album has sold
+                        more than 20 million copies, making it the biggest-selling album of her career. In 1999 the
+                        album
+                        received three Grammy Awards nominations including "Record of the Year", "Best Pop Album" and
+                        winning "Best Dance Recording" for the single "Believe". It was released by Warner Bros. Records
+                        at
+                        the end of 1998. The album was executive produced by Rob <a
+                            href="https://www.last.fm/music/Cher/Believe">Read more on Last.fm</a>
+                        alt='artwork for Believe by Cher'</p>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="card col-9 m-3 p-3" id="album10">
+            <h2 class="card-header">10. brand new eyes</h2>
+            <em>Paramore</em>
+            <div class="cardcont">
+                <img class="cardimg"
+                    src='https://lastfm.freetls.fastly.net/i/u/174s/8935ea2d777c8f2f5f3c7a8f521ea9fb.png'
+                    alt='artwork for brand new eyes by Paramore' width="250px">
+                <div class="textcont">
+                    <p class="cardtext">Brand New Eyes (stylized in lowercase) is the third studio album by American
+                        alternative rock band Paramore, released through Fueled by Ramen on September 29, 2009, in the
+                        United States and Canada. The album was produced by Rob Cavallo and recorded in Hidden Hills,
+                        California from January to March, 2009.It topped the charts in many countries across the world
+                        including Australia, New Zealand, Ireland and the United Kingdom, making it the band's most
+                        successful album to date. <a href="https://www.last.fm/music/Paramore/brand+new+eyes">Read more
+                            on Last.fm</a>.</p>
+                </div>
+            </div>
+        </article>
+  
+
+    <article class="card col-9 m-3 p-3" id="album0">
+            <h2 class="card-header">0. The Queen Is Dead</h2>
+            <em>The Smiths</em>
+            <div class="cardcont">
+            <img class="cardimg" src='https://lastfm.freetls.fastly.net/i/u/174s/53442bc27a314142a02d2df018b4161e.png' alt='artwork for The Queen Is Dead by The Smiths' width="250px">
+            <div class="textcont">
+                <p class="cardtext">The Queen Is Dead is the third studio album by the English rock band The Smiths. It was released on 16 June 1986 in the United Kingdom by Rough Trade Records and released in the United States on 23 June 1986 through Sire Records. The album reached number two on the UK album chart, maintaining a chart residency for 22 weeks, number 70 on the Billboard 200, and was certified Gold by the RIAA in late 1990. It has sold consistently well ever since. Guitarist Johnny Marr wrote several songs that would later appear on The Queen Is Dead while <a href="https://www.last.fm/music/The+Smiths/The+Queen+Is+Dead">Read more on Last.fm</a>.</p>
+                </div>
+              </div>
+        </article>
+      
+    <article class="card col-9 m-3 p-3" id="album1">
+            <h2 class="card-header">1. Disintegration</h2>
+            <em>The Cure</em>
+            <div class="cardcont">
+            <img class="cardimg" src='https://lastfm.freetls.fastly.net/i/u/174s/83b8ba7098904df8cd2a781da5b4f871.jpg' alt='artwork for Disintegration by The Cure' width="250px">
+            <div class="textcont">
+                <p class="cardtext">Disintegration is the eighth studio album by English alternative rock band The Cure, released on May 1, 1989. The record marks a return to the gloomy gothic rock style and introspective lyrics the band had established in the early 1980s, and is one of three quintessential Cure albums performed in entirety on the band's double live album, Trilogy. Stephen Thomas Erlewine of Allmusic called it the "culmination of all the musical directions the Cure were pursuing over the course of the '80s." In spite of record label fears that the album would be "commercial suicide", Disintegration became the band's commercial <a href="https://www.last.fm/music/The+Cure/Disintegration">Read more on Last.fm</a>.</p>
+                </div>
+              </div>
+        </article>
+      </div><body><html><!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Favorite Albums</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <style>
+            :root {
+                --main: #F7E1CC;
+                --light: #FFF6ED;
+                --dark: #AB937D;
+                --accent1: #6C9EAB;
+                --accent2: #CDEFF7;
+            }
+    
+            body {
+                background-color: var(--accent1);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+    
+            .navbar {
+                background-color: var(--accent2);
+                display: flex;
+                position: inherit;
+            }
+    
+            .nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            span {
+                position: relative;
+                top: 20px;
+            }
+    
+            .card {
+                background-color: var(--main);
+                filter: drop-shadow(1px 1px 1px #ada9a9);
+            }
+    
+            .card-header {
+                background-color: var(--light);
+    
+            }
+    
+            li {
+                padding: 0.5em;
+                font-size: 18px;
+            }
+    
+            em {
+                font-size: 20px;
+                background-color: var(--dark);
+                color: antiquewhite;
+                padding: 8px;
+            }
+    
+            .main {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+    
+            .cardimg {
+                width: 250px;
+                margin: 5px;
+                float: left;
+                border-radius: 2px;
+            }
+    
+            .cardtext {
+                display: inline;
+            }
+    
+            .textcont {
+                padding: 15px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    
+    <body>
+    
+        <nav class="navbar">
+            <div class="container-fluid nav">
+                <span class="m-5 h1 head">Favorite Albums</span>
+            </div>
+        </nav>
+    
+        <div class="container main">

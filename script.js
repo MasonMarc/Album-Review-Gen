@@ -77,12 +77,12 @@ const addMore = () => {
             name: 'select'
         }])
         .then((answer) => {
-            if (answer.select === 'yes' || count !== 0) {
-                count--;
+            if (answer.select === 'yes') {
+                count-- ;
                 choosealbum();
             }
-            else if (answer.select === 'no' || count == 10) {
-                fs.appendFile('./dist/album.html', `<body><html>`, function (error) {
+            else if (answer.select === 'no') {
+                fs.appendFile('./dist/album.html', `</div><body><html>`, function (error) {
                     if (error) throw error;
                 })
             }
@@ -90,5 +90,107 @@ const addMore = () => {
         })
 }
 
-
+const startHtml = () => {
+    fs.appendFile('./dist/album.html', `<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Favorite Albums</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <style>
+            :root {
+                --main: #F7E1CC;
+                --light: #FFF6ED;
+                --dark: #AB937D;
+                --accent1: #6C9EAB;
+                --accent2: #CDEFF7;
+            }
+    
+            body {
+                background-color: var(--accent1);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+    
+            .navbar {
+                background-color: var(--accent2);
+                display: flex;
+                position: inherit;
+            }
+    
+            .nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            span {
+                position: relative;
+                top: 20px;
+            }
+    
+            .card {
+                background-color: var(--main);
+                filter: drop-shadow(1px 1px 1px #ada9a9);
+            }
+    
+            .card-header {
+                background-color: var(--light);
+    
+            }
+    
+            li {
+                padding: 0.5em;
+                font-size: 18px;
+            }
+    
+            em {
+                font-size: 20px;
+                background-color: var(--dark);
+                color: antiquewhite;
+                padding: 8px;
+            }
+    
+            .main {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+    
+            .cardimg {
+                width: 250px;
+                margin: 5px;
+                float: left;
+                border-radius: 2px;
+            }
+    
+            .cardtext {
+                display: inline;
+            }
+    
+            .textcont {
+                padding: 15px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    
+    <body>
+    
+        <nav class="navbar">
+            <div class="container-fluid nav">
+                <span class="m-5 h1 head">Favorite Albums</span>
+            </div>
+        </nav>
+    
+        <div class="container main">`, 
+    function (error) {
+        if (error) throw error;
+    })
+}
+startHtml();
 choosealbum();
